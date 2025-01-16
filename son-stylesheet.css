@@ -4,12 +4,9 @@
 }
 body{
 font-family: Quicksand;
-font-size: 20px;
+font-size: 18px;
 font-weight: 400;
 line-height: 33px;
-text-align: left;
-text-underline-position: from-font;
-text-decoration-skip-ink: none;
 }
 :root {
     --site-primary-color: #004A8F;
@@ -537,8 +534,10 @@ h3.faq-title{
 }
 
 .accordion>.faq-box:not(:last-child)>.faq-title {
-    border: dotted 1px #D1D1D1;
-    color: #ffffff;
+    border: dotted 2px #D1D1D1;
+}
+.accordion>.faq-box:is(:first-child)>.faq-title {
+    border: none;
 }
 
 .accordion>.faq-box>.faq-title:before {
@@ -654,6 +653,7 @@ font-family: Quicksand;
 font-size: 18px;
 font-weight: 700;
 line-height: 40px;
+color: #fff;
 }
 .social-icons a {
     font-size: 12px;
