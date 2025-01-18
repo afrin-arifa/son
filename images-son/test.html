@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<style>
+
+  .rapper{
+    .bodyx{
+      overflow: hidden;
+      transition: 0.3s;
+      max-height: 50px;
+    }
+    &[status="false"]{
+      .ar_m{
+        display: none;
+      }
+      .bodyx{
+        max-height: 0px;
+      }
+    }
+    &[status="true"]{
+      .ar_p{
+        display: none;
+      }
+    }
+  }
+</style>
+
+</head>
+<body>
+
+  <div class="rapper" status="true">
+    <div class="head" >
+      Collect Admission Form from our office.
+      <span class="all">
+        <span class="ar_p">+</span>
+        <span class="ar_m">-</span>
+      </span>
+    </div>
+
+    <div class="bodyx">
+      We work towards holistic education where the educators address the  emotional, social, ethical and academic needs of the students in an  integrated learning format.
+    </div>
+  </div>
+
+
+  <div class="rapper" status="false">
+    <div class="head" >
+      Collect Admission Form from our office.
+      <span class="all">
+        <span class="ar_p">+</span>
+        <span class="ar_m">-</span>
+      </span>
+    </div>
+
+    <div class="bodyx">
+      We work towards holistic education where the educators address the  emotional, social, ethical and academic needs of the students in an  integrated learning format.
+    </div>
+  </div>
+
+  <div class="rapper" status="false">
+    <div class="head" >
+      Collect Admission Form from our office.
+      <span class="all">
+        <span class="ar_p">+</span>
+        <span class="ar_m">-</span>
+      </span>
+    </div>
+
+    <div class="bodyx">
+      We work towards holistic education where the educators address the  emotional, social, ethical and academic needs of the students in an  integrated learning format.
+    </div>
+  </div>
+
+  <div class="rapper" status="false">
+    <div class="head" >
+      Collect Admission Form from our office.
+      <span class="all">
+        <span class="ar_p">+</span>
+        <span class="ar_m">-</span>
+      </span>
+    </div>
+
+    <div class="bodyx">
+      We work towards holistic education where the educators address the  emotional, social, ethical and academic needs of the students in an  integrated learning format.
+    </div>
+  </div>
+  
+  <script>
+    const getRaper = document.querySelectorAll(".rapper");
+
+    for(let eachRapper of getRaper){
+      const getHeader = eachRapper.querySelector(".head");
+      getHeader.addEventListener("click", function(){
+
+        for(let eachRapperClose of getRaper){
+          if(eachRapperClose !== eachRapper){
+            eachRapperClose.setAttribute("status", false);
+          }
+        }
+
+        let currentStatus = eachRapper.getAttribute("status") === "true";
+        eachRapper.setAttribute("status", !currentStatus);
+      })
+    }
+
+
+  </script>
+
+</body>
+</html>
